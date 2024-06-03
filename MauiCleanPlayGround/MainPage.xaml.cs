@@ -6,16 +6,20 @@ public partial class MainPage : ContentPage
 {
 	int count = 0;
 
-	public MainPage()
+    public  MainPageViewModel vm { get; set; }
+
+    public MainPage()
 	{
 		InitializeComponent();
 
-		BindingContext = new MainPageViewModel();
+        vm = new MainPageViewModel();
+        BindingContext = vm;
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-	}
+    void SwipeView_HandlerChanged(System.Object sender, System.EventArgs e)
+    {
+        vm.SwipeView_HandlerChanged.Execute(true);
+    }
 }
 
 

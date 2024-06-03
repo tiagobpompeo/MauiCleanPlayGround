@@ -4,6 +4,18 @@
              x:Class="MauiCleanPlayGround.MainPage">
 
     <VerticalStackLayout>
+
+
+        <Button Text="Change Text"
+                Command="{Binding ChangeTextCommand}"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+          <Button Text="Change Text"
+                Clicked="SwipeView_HandlerChanged"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
        <SwipeView>
            <SwipeView.LeftItems>
               <SwipeItem Text="T" BackgroundColor="AliceBlue" IconImageSource="dotnet_bot.png"> </SwipeItem>
